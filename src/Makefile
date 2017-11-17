@@ -5,7 +5,7 @@ OPT = -O3
 
 # -Wno-deprecated-declarations shuts up Apple OSX clang
 FLAGS = -Wall -Wno-format -Wno-deprecated-declarations -D_POSIX_C_SOURCE=200112L $(OPT) -DPREFETCH -I. $(CPPFLAGS) -pthread 
-GPP = g++ -march=native -m64 -std=c++11 $(FLAGS)
+GPP = g++ -m64 -std=c++11 $(FLAGS)
 CFLAGS = -Wall -Wno-format -fomit-frame-pointer $(OPT)
 GCC = gcc -m64 -std=gnu11 $(CFLAGS)
 LIBS = -L. -lblake2b
